@@ -1,0 +1,29 @@
+{
+    "name": "uniscale/private-demo-php-backend",
+    "description": "Demo code for PHP SDK",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Uniscale\\PrivateDemoPhpBackend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aleksi Kontkanen",
+            "email": "alk@uniscale.com"
+        },
+        {
+            "name": "Jere Junttila",
+            "email": "jj@uniscale.com"
+        }
+    ],
+    "require": {
+        "uniscale/actorcharacter-messagethreads": "1.0.18"
+    },
+    "repositories": {
+        "uniscale": {
+            "type": "composer",
+            "url": "https://sdk.uniscale.com/api/packages/8c68f0da-8a3c-45bb-abba-2b6d36aa6b3c/composer/"
+        }
+    }
+}
