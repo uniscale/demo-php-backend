@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5186a3e87eff2e75cb5424932cdb5a84",
+    "content-hash": "7d594498e9cdb8db98b2b2985b3f63f7",
     "packages": [
         {
             "name": "brick/math",
@@ -898,11 +898,11 @@
         },
         {
             "name": "uniscale/actorcharacter-messagethreads",
-            "version": "1.0.31",
+            "version": "1.0.49",
             "dist": {
                 "type": "zip",
-                "url": "https://sdk.uniscale.com/api/packages/8c68f0da-8a3c-45bb-abba-2b6d36aa6b3c/composer/files/uniscale%2Factorcharacter-messagethreads/1.0.31/uniscale-actorcharacter-messagethreads.1.0.31.zip",
-                "shasum": "99e6b9e6e451c6a1378cc41d577e8e2fd8a7b040"
+                "url": "https://sdk.uniscale.com/api/packages/8c68f0da-8a3c-45bb-abba-2b6d36aa6b3c/composer/files/uniscale%2Factorcharacter-messagethreads/1.0.49/uniscale-actorcharacter-messagethreads.1.0.49.zip",
+                "shasum": "590f6ab785c8eb96034684a4a5bacf2851525f47"
             },
             "require": {
                 "ext-curl": "*",
@@ -932,7 +932,7 @@
                 }
             },
             "description": "Core Uniscale SDK for PHP",
-            "time": "2024-08-31T08:54:09+00:00"
+            "time": "2024-09-09T13:08:23+00:00"
         }
     ],
     "packages-dev": [],

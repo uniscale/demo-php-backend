@@ -4,10 +4,11 @@ namespace Uniscale\PrivateDemoPhpBackend\Services;
 
 use DateTime;
 use Ramsey\Uuid\Uuid;
-use stdClass;
 use Uniscale\Http\Result;
 use Uniscale\Platform\PlatformInterceptorBuilder;
+use Uniscale\Uniscaledemo\Messages\Messages\Empty_;
 use Uniscale\Uniscaledemo\Messages\Messages\MessageFull;
+use Uniscale\Uniscaledemo\Messages\Messages\SendMessageInput;
 use Uniscale\Uniscaledemo\Messages\Messages\UserTag;
 use Uniscale\Uniscaledemo\Messages_1_0\ErrorCodes;
 use Uniscale\Uniscaledemo\Messages_1_0\Functionality\Servicetomodule\Messages\Timeline\Listmessages\GetMessageList;
@@ -33,7 +34,7 @@ class TimelineInterceptors
     {
         $builder->interceptMessage(
             SendMessage::FEATURE_ID,
-            SendMessage::handle(function (stdClass $input, FeatureContext $ctx) use (&$messages) { //TODO: SendMessageInput
+            SendMessage::handle(function (SendMessageInput $input, FeatureContext $ctx) use (&$messages) {
                 // Validate message length
                 if (strlen($input->message) < 3 || strlen($input->message) > 60) {
                     return Result::badRequest(ErrorCodes::$messages->invalidMessageLength);
@@ -54,7 +55,7 @@ class TimelineInterceptors
             }));
         $builder->interceptRequest(
             GetMessageList::FEATURE_ID,
-            GetMessageList::handle(function (StdClass $input, FeatureContext $ctx) use (&$messages) { //TODO: Empty_
+            GetMessageList::handle(function (Empty_ $input, FeatureContext $ctx) use (&$messages) {
                 $response = self::getMessages($messages);
 
                 return Result::ok($response);
